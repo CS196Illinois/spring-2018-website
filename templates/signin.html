@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>CS196@Illinois</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}" />
+	</head>
+    	<body>
+		<header id="header">
+			<h3>Sign in to a Lecture</h3>
+		</header>
+		<!-- Signup Form -->
+		<form id="signup-form" method="post" action="signin">
+			<input type="text" name="netid" placeholder="NetID" />
+			<input type="submit" value="Submit" />
+		</form>
+                {{ msg }}
+		<!-- Footer -->
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="https://instagram.com/youjustgottrolled" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="https://github.com/CS196Illinois" class="icon fa-github"><span class="label">GitHub</span></a></li>
+				<li><a href="cs196-instructors@illinois.edu" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+				<li><a href="https://piazza.com" class="icon fa-book"><span class="label">Piazza</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; Duke Vijitbenjaronk.</li><li>CS 196 Fall 2017</li>
+			</ul>
+		</footer>
+    	</body>
+</html>
