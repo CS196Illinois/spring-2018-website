@@ -37,11 +37,14 @@ def signin():
             if "netid" not in request.form:
                 msg = "Please enter a valid NetID."
                 break
-            users = User.query.all()
-            u = User.query.filter_by(netid=request.form["netid"]).first()
+            u = User.query.filter_by(netid=request.form["netid"].encode('ascii','ignore')).first()
             if u is None:
                 msg = "Please enter a valid NetID."
                 break
+            signin = Signin.query.filter_by(userid=u.id).filter_by(sessionid=session.id).first()
+            if signin is not None:
+                msg = "Already signed in for this session."
+                break 
             s = Signin(
                 userid = u.id,
                 sessionid = session.id
@@ -96,7 +99,7 @@ def import_data():
         # load sessions
         session_ctr = 0
         while session_ctr < sessions:
-            session_line = backup.readline()
+            session_line = backup.readline().encode('ascii', 'ignore')
             s = Session(
                 date = datetime.strptime(session_line, "%Y-%m-%dT%H:%M:%S.%f\n"),
                 alive = False
@@ -106,7 +109,7 @@ def import_data():
         # load users
         user_ctr = 0
         while user_ctr < users:
-            user_line = backup.readline().replace("\n","").split(",")
+            user_line = backup.readline().encode('ascii', 'ignore').replace("\n","").replace("\r","").split(",")
             u = User(
                 netid = user_line[0]
             )
@@ -120,6 +123,7 @@ def import_data():
                 db.session.add(s)
             user_ctr += 1
         db.session.commit()
+        logging.warning("sessions:%d users:%d" % (Session.query.count(), User.query.count()))
 
 #
 # backup data to backup.csv
@@ -146,4 +150,4 @@ if __name__ == "__main__":
     db.init_app(app)
     db.create_all(app=app)
     import_data()
-    app.run("0.0.0.0", port=80)
+    app.run("0.0.0.0", port=80, threaded=True)
