@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, abort
 import logging
 import os
 import sched
@@ -66,8 +66,22 @@ def closesession():
 
 @app.route("/backup")
 def backup():
-    retval = backup_data()
+    backup_data()
     return "successfully backed up"
+
+@app.route("/webhook", methods=["POST"])
+def webhook():
+    if not request.json or "ref" not in request.json:
+        return abort(400)
+    elif request.json["ref"] == "refs/heads/master":
+        backup_data()
+        func = request.environ.get('werkzeug.server.shutdown')
+        if func is None:
+            raise RuntimeError
+        func()
+    else:
+        logging.error("non-master branch updated; no reload")
+    return "success"
 
 @app.route("/")
 def home():
