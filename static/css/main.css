@@ -1258,7 +1258,7 @@ body {
   html, body {
     min-width: 320px; } }
 body {
-  background: #5395AB; }
+  background: #ff785f; }
   body.is-loading *, body.is-loading *:before, body.is-loading *:after {
     -moz-animation: none !important;
     -webkit-animation: none !important;
@@ -1524,14 +1524,14 @@ button,
   input[type="button"].big,
   button.big,
   .button.big {
-    font-size: 0.8em; }
+    font-size: 0.8em; } 
   input[type="submit"].special,
   input[type="reset"].special,
   input[type="button"].special,
   button.special,
   .button.special {
     background-color: #ffffff;
-    color: #5395AB !important; }
+    color: #ff785f !important; }
     input[type="submit"].special:after,
     input[type="reset"].special:after,
     input[type="button"].special:after,
@@ -1843,7 +1843,7 @@ textarea {
     display: none; }
 
 select option {
-  background-color: #5395AB;
+  background-color: #ff785f;
   color: #ffffff; }
 
 input[type="text"],
@@ -1959,7 +1959,7 @@ input[type="radio"] + label:before {
     display: block;
     background: #ffffff;
     border-radius: 100%;
-    color: #5395AB;
+    color: #ff785f;
     text-align: center;
     line-height: 2.5em;
     margin: 0 0 1.3em 0; }
@@ -1974,9 +1974,9 @@ input[type="radio"] + label:before {
       .wrapper.style2-alt .icon.major:before {
         color: #20728e; }
       .wrapper.style3 .icon.major:before {
-        color: #2EA657; }
+        color: #494949; }
       .wrapper.style3-alt .icon.major:before {
-        color: #237e42; }
+        color: #494949; }
 
 /* Image */
 .image {
@@ -2393,9 +2393,9 @@ table {
   .wrapper.style2-alt {
     background-color: #20728e; }
   .wrapper.style3 {
-    background-color: #2EA657; }
+    background-color: #494949; }
   .wrapper.style3-alt {
-    background-color: #237e42; }
+    background-color: #494949; }
   .wrapper.fullscreen {
     display: -moz-flex;
     display: -webkit-flex;
@@ -2559,7 +2559,7 @@ table {
 /* Sidebar */
 #sidebar {
   padding: 2.5em 2.5em 0.5em 2.5em ;
-  background: #5395AB;
+  background: #ff785f;
   cursor: default;
   height: 100vh;
   left: 0;
