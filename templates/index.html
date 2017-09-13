@@ -1,46 +1,462 @@
 <!DOCTYPE HTML>
 <!--
-	Eventually by HTML5 UP
+	Hyperspace by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 	<head>
-		<title>CS196@Illinois</title>
+		<title>CS 196</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+		<link rel="icon" 
+      type="image/png" 
+      href="https://imgur.com/5GdDgzX.png">
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}" />
 		<link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
-	<body>
+	<body style="font-family: 'Oxygen', sans-serif;">
 
-		<!-- Header -->
-			<header id="header">
-				<h1>Welcome to CS 196!</h1>
-				<p>CS196@Illinois is a freshman honor class by students, for students.<br />
-				</p>
-			</header>
+		<!-- Sidebar -->
+			<section id="sidebar" style="background-color:#ff785f;">
+				<div class="inner" style="font-size: 12pt;">
+					<nav>
+						<ul>
+							<li><a href="#intro">Welcome</a></li>
+							<li><a href="#homeworks">Homework</a></li>
+							<li><a href="#links">Links</a></li>
+							<li><a href="#attendance">Attendance</a></li>
+							<li><a href="#lectures">Lectures</a></li>
+							<li><a href="#events">Events</a></li>
+							<li><a href="#officers">Officers</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
 
-		<!-- Signup Form -->
-			<form id="signup-form" method="post" action="#">
-				<input type="email" name="email" id="email" placeholder="Email Address" />
-				<input type="submit" value="Sign Up" />
-                        {{msg|safe}}
-			</form>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper fullscreen fade-up" style="background-image:url(http://i65.tinypic.com/11hrqsl.jpg) !important;">
+						<div class="inner">
+							<div class="row">
+								<div class="col-sm-4">
+									<img align="right" style="width:12em" src ="https://imgur.com/5GdDgzX.png"/>
+								</div>
+								<div class="col-sm-8">
+									<h1 style="font-size:45pt;">CS196@Illinois</h1>
+									<p>Illinois' premier freshman honor class by students, for students.</p>
+									<ul class="actions">
+										<li><a href="#homeworks" class="button scrolly" style="font-size: 8pt;">Homework</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="homeworks" class="wrapper spotlights">
+						<section style="background-color:#E6C144;">
+							<a class="image"><img src="https://svn.python.org/www/branches/rest2web/beta.python.org/resources/design/logo/python-logo-master-flat-symbolonly-cafepress2.png" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Homework 1</h2>
+									<p>This homework tests your understanding and usage of basic Python.</p>
+									<ul class="actions">
+										<li><a href="https://relate.cs.illinois.edu/course/cs196-fa17/flow/hw1/start/" class="button">View</a></li>
+										<li>Due before: Lecture 4</li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section style="background-color:#fcd44a;">
+							<a class="image"><img src="https://svn.python.org/www/branches/rest2web/beta.python.org/resources/design/logo/python-logo-master-flat-symbolonly-cafepress2.png" alt="" data-position="top center" /></a>
+							<div class="content">
+								<div class="inner" >
+									<h2>Homework 2</h2>
+									<p>This homework tests your understanding of loops and arrays in Python.</p>
+									<ul class="actions">
+										<li><a href="https://relate.cs.illinois.edu/course/cs196-fa17/flow/hw2/start/" class="button">View</a></li>
+										<li>Due before: Lecture 4</li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section style="background-color:#FCD75A;">
+							<a class="image"><img src="https://svn.python.org/www/branches/rest2web/beta.python.org/resources/design/logo/python-logo-master-flat-symbolonly-cafepress2.png" alt="" data-position="25% 25%" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Next Homework</h2>
+									<p>N/A</p>
+									<ul class="actions">
+										<li><a class="button">View</a></li>
+										<li>Not Released</li>
+									</ul>
+								</div>
+							</div>
+						</section>
+					</section>
+
+				<!-- links -->
+					<section id="links" class="wrapper fade-up">
+						<div class="inner">
+							<h2 style="margin-bottom:30px;">Resources</h2>
+							<div class="features">
+								<section><a href = "https://github.com/CS196Illinois" style="color:white;text-decoration: none">
+									<span class="icon major fa-code"></span>
+									<h3>GitHub</h3>
+									<p>GitHub is a development platform inspired by the way you work. From open source to business, you can host and review code, manage projects, and build software alongside millions of other developers.</p>
+								</a>
+								</section>
+								<section><a href = "https://piazza.com/" style="color:white;text-decoration: none">
+									<span class="icon major fa-lock"></span>
+									<h3>Piazza</h3>
+									<p>An incredibly easy, completely free Q&A platform. Have a question? Post on Piazza! But for real though, try to search if someone else had the same question first before posting. Thanks!</p>
+								</a>	
+								</section>
+								<section><a href = "https://relate.cs.illinois.edu/course/cs196-fa17/" style="color:white;text-decoration: none">
+									<span class="icon major fa-cog"></span>
+									<h3>Relate</h3>
+									<p>We use RELATE to do the first few homeworks. Don't procrastinate on them! They can get a little tricky at times, so start early.</p>
+								</a>	
+								</section>
+								<section><a href = "https://stackoverflow.com/" style="color:white;text-decoration: none">
+									<span class="icon major fa-desktop"></span>
+									<h3>Stack Overflow</h3>
+									<p>Stack Overflow is the largest, most trusted online community for developers to learn, share​ ​their programming ​knowledge, and build their careers. You could probably get your CS degree from this website.</p>
+								</a>	
+								</section>
+							</div>
+						</div>
+					</section>
+
+				<!-- Attendance -->
+					<section id="attendance" class="wrapper fade-up">
+						<div class="inner">
+							<h2>Attendance</h2>
+							<p>Want attendance credit? Make sure you sign in with your NetID when you're at an ongoing lecture!</p>
+							<div class="split style1">
+								<section>
+									<form method="post" action="#">
+										<div class="field">
+											<label for="name">NetID</label>
+											<input type="text" name="name" id="name" />
+										</div>
+						
+										<ul class="actions">
+											<li><a href="" class="button submit">I'm Here!</a></li>
+											{{msg|safe}}
+										</ul>
+									</form>
+								</section>
+								<section>
+									<ul class="contact">
+										<li>
+											<h3>Lecture Status</h3>
+											<span>Happening Now</span>
+										</li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</section>
+
+				<!-- Lectures -->
+				<section id="lectures" class="wrapper fade-up">
+					<div class="inner">
+						<h2>Lectures</h2>
+					</div>	
+				</section>
+
+				<!-- Events -->
+				<section id="events" class="wrapper fade-up">
+					<div class="inner">
+						<h2>Events</h2>
+					</div>	
+				</section>
+
+
+				<!-- Officers -->
+				<section id="officers" class="wrapper fade-up">
+					<div class="inner">
+						<h2 style="margin-bottom: 20px; font-weight:800;">Officers</h2>
+						<div class="row">
+						    <div class="col-sm-3"> 
+						    	<div class="officer-bg">
+							    	<img src = "https://imgur.com/xWvKbjc.jpg"/>
+							    	<h4>Caren Zeng</h4>
+							    	<p>I like building things and singing. Please say hi! I'd love to meet you all.</p>
+							    </div>	
+						    </div>
+						    <div class="col-sm-3"> 
+						    	<div class="officer-bg">
+							    	<img src = "https://imgur.com/8H1fi9X.jpg"/>
+							    	<h4>Arkin Dharawat</h4>
+							    	<p>Data Analyst. Student entrepreneur. Card Thrower. Not a GoT fan. I blog about AI and technology trends in my spare time. </p>
+						    		<div class= "row" style="padding:3px;">
+								    	<div class="col-sm-6" style="text-align:center; font-size:12pt;padding:5px;">
+								    		<a style="text-align:center; font-size:11pt; font-weight: bold; color:black" href="https://github.com/ArkinDharawat">GitHub</a>
+								    	</div>	
+								    	<div class="col-sm-6" style="text-align:center; font-size:12pt;  #ff785f;padding:5px;">
+								    		<a style="text-align:center; font-size:11pt; font-weight: bold; color:black" href="http://arkindharawat.me">Site</a>
+								    	</div>
+							    	</div>
+						    	</div>
+						    </div>
+						    <div class="col-sm-3"> 
+						    	<div class="officer-bg">
+							    	<img src = "https://imgur.com/4Wdt08R.jpg"/>
+							    	<h4>Zhuoyue Wang</h4>
+							    	<p>Sophomore in computer science major, interested in data science</p>
+							    </div>
+						    </div>
+						    <div class="col-sm-3"> 
+						    	<div class="officer-bg">
+							    	<img src = "https://imgur.com/6qJNJCg.jpg"/>
+							    	<h4>David Brewster</h4>
+							    	<p>I am a sophomore with experience with some of Python's deep learning and visualization tools. I also enjoy competitive programming.</p>
+							    	<div class= "row" style="padding:3px;">
+								    	<div class="col-sm-6" style="text-align:center; font-size:12pt;padding:5px;">
+								    		<a style="text-align:center; font-size:11pt; font-weight: bold; color:black" href="http://github.com/ljeabmreosn">GitHub</a>
+								    	</div>	
+								    	<div class="col-sm-6" style="text-align:center; font-size:12pt;  #ff785f;padding:5px;">
+								    		<a style="text-align:center; font-size:11pt; font-weight: bold; color:black" href="http://davidbrewster.xyz">Site</a>
+								    	</div>
+							    	</div>
+							    </div>
+						    </div>
+					    </div>
+					    <div class="row">
+						   <div class="col-sm-3"> 
+						    	<div class="officer-bg">
+							    	<img src = "https://imgur.com/ft2bkW5.jpg"/>
+							    	<h4>Connor McCloskey</h4>
+							    	<p>I'm currently a junior at UIUC studying Economics and Statistics with a minor in Computer Science.  I enjoy working out, hanging with friends, and making ridiculously complicated coffee. </p>
+							    </div>	
+						    </div>
+						    <div class="col-sm-3"> 
+						    	<div class="officer-bg">
+							    	<img src = "https://imgur.com/bEvNdHY.jpg"/>
+							    	<h4>Hana Rimawi</h4>
+							    	<p>Memez for dayz</p>
+							    	<div class= "row" style="padding:3px;">
+							    		<a class="col-md-12" style="text-align:center; font-size:11pt; font-weight: bold; color:black" href="https://github.com/HRimaw2">GitHub</a>
+							    	</div>
+							    </div>	
+						    </div>
+						    <div class="col-sm-3"> 
+						    	<div class="officer-bg">
+							    	<img src = "https://imgur.com/ZeL4BWn.jpg"/>
+							    	<h4>David Wang</h4>
+							    	<p>i like big code and big memes</p>
+							    	<div class= "row" style="padding:3px;">
+							    		<a style="text-align:center; font-size:11pt; font-weight: bold; color:black" class="col-md-12"  href="https://github.com/Davidw1339">GitHub</a>
+							    	</div>
+							    </div>	
+						    </div>
+						    <div class="col-sm-3"> 
+						    	<div class="officer-bg">
+							    	<img src = "https://imgur.com/2hjFVOk.jpg"/>
+							    	<h4>Simeng Liu</h4>
+							    	<p>My crash on CS is turning to a true love. The more you dive in, the more charming it will be.</p>
+							    	<div class= "row" style="padding:3px;">
+							    		<a style="text-align:center; font-size:11pt; font-weight: bold; color:black" class="col-md-12"  href="https://github.com/slm960323">GitHub</a>
+							    	</div>
+							    </div>	
+						    </div>
+						</div>
+					    <div class="row">
+						    <div class="col-sm-3"> 
+						    	<div class="officer-bg">
+							    	<img src = "https://imgur.com/X6EYTav.jpg"/>
+							    	<h4>Koushhik Kumar</h4>
+							    	<p>I like 3D printing and turtles. I also 3D printed a turtle once.</p>
+							    	<div class= "row" style="padding:3px;">
+							    		<a class="col-md-12" style="text-align:center; font-size:11pt; font-weight: bold; color:black" href="https://github.com/k98kumar">GitHub</a>
+							    	</div>
+							    </div>	
+						    </div>
+						    <div class="col-sm-3"> 
+						    	<div class="officer-bg">
+							    	<img src = "https://imgur.com/ghryqFS.jpg"/>
+							    	<h4>Anna Buyevich</h4>
+							    	<p>Hi my name is Anna Buyevich. I'm a computer science and math major. A fun fact about me is that I've been skydiving twice.</p>
+							    	<div class= "row" style="padding:3px;">
+								    	<div class="col-sm-6" style="text-align:center; font-size:12pt;padding:5px;">
+								    		<a style="text-align:center; font-size:11pt; font-weight: bold; color:black" href="http://annabuyevich.com">GitHub</a>
+								    	</div>	
+								    	<div class="col-sm-6" style="text-align:center; font-size:12pt;  #ff785f;padding:5px;">
+								    		<a style="text-align:center; font-size:11pt; font-weight: bold; color:black" href="https://github.com/annabuyevich">Site</a>
+								    	</div>
+							    	</div>
+							    </div>	
+						    </div>
+						    <div class="col-sm-3"> 
+						    	<div class="officer-bg">
+							    	<img src = "https://imgur.com/NcCVZ7a.jpg"/>
+							    	<h4>Ema Milojkovic</h4>
+							    	<p>I'm a sophomore in computer science with a love of bread, boba, and birds! Currently, I'm interested in networking, distributed systems, and data science-esque things.</p>
+							    </div>	
+						    </div>
+						    <div class="col-sm-3"> 
+						    	<div class="officer-bg">
+							    	<img src = "https://imgur.com/zX2c7Ad.png"/>
+							    	<h4>Zachary Mabry</h4>
+							    	<p>I like to play video games and code small fun projects.</p>
+							    	<div class= "row" style="padding:3px;">
+							    		<a style="text-align:center; font-size:11pt; font-weight: bold; color:black" class="col-md-12" style="text-align:center; font-size:12pt;" href="https://github.com/zmabry2">GitHub</a>
+							    	</div>
+							    </div>	
+						    </div>
+						</div>
+					    <div class="row">
+						    <div class="col-sm-3"> 
+						    	<div class="officer-bg">
+							    	<img src = "https://imgur.com/MZfA2wx.png"/>
+							    	<h4>Duke Vijitbenjaronk</h4>
+							    	<p>I'm a sophomore in computer engineering with research interests in machine learning and parallel/distributed computing.</p>
+							    	<div class= "row" style="padding:3px;">
+							    		<a style="text-align:center; font-size:11pt; font-weight: bold; color:black" class="col-md-12" style="text-align:center; font-size:12pt;" href="https://github.com/warut-vijit">GitHub</a>
+							    	</div>	
+							    </div>
+						    </div>
+						    <div class="col-sm-3"> 
+						    	<div class="officer-bg"> 
+							    	<img src = "https://imgur.com/X6Zd7nY.jpg"/>
+							    	<h4>Chen Qian</h4>
+							    	<p>Sophomore in Computer Science, front end web developer.</p>
+							    </div>	
+						    </div>
+						    <div class="col-sm-3"> 
+						    	<div class="officer-bg">
+							    	<img src = "https://imgur.com/JUOxEwb.jpg"/>
+							    	<h4>Joshua Dunigan</h4>
+							    	<p>I am helping with the data science hackerspace. </p>
+							    </div>
+						    </div>
+						    <div class="col-sm-3"> 
+						    	<div class="officer-bg">
+							    	<img src = "https://imgur.com/NBgNlxb.jpg"/>
+							    	<h4>Emily Tokarski</h4>
+							    	<p>Hacker, Hustler, Hipster. 
+	Part time cat lover, chef, bad dancer, and pun extraordinaire, full time aerospace engineering dweeb. </p>
+								</div>
+						    </div>
+					    </div>
+					    <div class="row">
+						    <div class="col-sm-3"> 
+						    	<div class="officer-bg">
+							    	<img src = "https://imgur.com/v8rqPdb.jpg"/>
+							    	<h4>Eric Lee</h4>
+							    	<p>Besides CompSci, I'm actually ridiculously good at CS:GO too. If you want to be on the College team, DM me.</p>
+							    	<div class= "row" style="padding:3px;">
+								    	<a class="col-md-12" style="text-align:center; font-size:11pt; font-weight: bold; color:black" href="https://github.com/dl-eric">GitHub</a>
+							    	</div>
+							    </div>	
+						    </div>
+						    <div class="col-sm-3"> 
+						    	<div class="officer-bg">
+							    	<img src = "https://imgur.com/P1TmTdp.jpg"/>
+							    	<h4>Justin Yang</h4>
+							    	<p>I like memes. My favorite Pokémon is Psyduck.</p>
+							    	<div class= "row" style="padding:3px;">
+								    	<div class="col-sm-6" style="text-align:center; font-size:12pt;padding:5px;">
+								    		<a style="text-align:center; font-size:11pt; font-weight: bold; color:black" href="https://github.com/justinyangusa">GitHub</a>
+								    	</div>	
+								    	<div class="col-sm-6" style="text-align:center; font-size:12pt;  #ff785f;padding:5px;">
+								    		<a style="text-align:center; font-size:11pt; font-weight: bold; color:black" href="https://y4ng.com">Site</a>
+								    	</div>
+							    	</div>
+							    </div>	
+						    </div>
+						    <div class="col-sm-3"> 
+						    	<div class="officer-bg">
+							    	<img src = "https://imgur.com/4tHMrG2.jpg"/>
+							    	<h4>Megha Mallya</h4>
+							    	<p>Sips Boba Tea.</p>
+							    	<div class= "row" style="padding:3px;">
+								    	<div class="col-sm-6" style="text-align:center; font-size:12pt;padding:5px;">
+								    		<a style="text-align:center; font-size:11pt; font-weight: bold; color:black" href="https://github.com/meghatron3000">GitHub</a>
+								    	</div>	
+								    	<div class="col-sm-6" style="text-align:center; font-size:12pt;  #ff785f;padding:5px;">
+								    		<a style="text-align:center; font-size:11pt; font-weight: bold; color:black"href="https://meghatron3000.github.io/">Site</a>
+								    	</div>
+							    	</div>
+						    	</div>
+						    </div>
+						    <div class="col-sm-3"> 
+						    	<div class="officer-bg">
+							    	<img src = "https://vivekvaidya.me/images/usethis.png"/>
+							    	<h4 style="font-weight: bold;">Vivek Vaidya</h4>
+							    	<p>wannabe</p>
+							    	<div class= "row" style="padding:3px;">
+								    	<div class="col-sm-6" style="text-align:center; font-size:12pt;padding:5px;">
+								    		<a style="text-align:center; font-size:11pt; font-weight: bold; color:black" href="https://github.com/vivekvaidya">GitHub</a>
+								    	</div>	
+								    	<div class="col-sm-6" style="text-align:center; font-size:12pt;  #ff785f;padding:5px;">
+								    		<a style="text-align:center; font-size:11pt; font-weight: bold; color:black" href="https://vivekvaidya.me">Site</a>
+								    	</div>
+							    	</div>
+							    </div>	
+						    </div> 
+						  </div>
+						<!-- <div class="features">
+							<section>
+								<div class="features">
+									<section>
+										<span class="icon major fa-lock"></span>
+										<h3>Piazza</h3>
+										<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									</section>
+									<section>
+										<span class="icon major fa-lock"></span>
+										<h3>Piazza</h3>
+										<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									</section>
+								</div>	
+							</section>
+							<section>
+								<div class="features">
+									<section>
+										<span class="icon major fa-lock"></span>
+										<h3>Piazza</h3>
+										<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									</section>
+									<section>
+										<span class="icon major fa-lock"></span>
+										<h3>Piazza</h3>
+										<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									</section>
+								</div>	
+							</section>
+						</div>	 -->
+					</div>	
+				</section>
+			</div>
 
 		<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="https://instagram.com/youjustgottrolled" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="https://github.com/CS196Illinois" class="icon fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="cs196-instructors@illinois.edu" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-					<li><a href="https://piazza.com" class="icon fa-book"><span class="label">Piazza</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Tyler Kim.</li><li>CS 196 Fall 2017</li>
-				</ul>
+			<footer id="footer" class="wrapper" style="background-color:#ff785f; text-align:center;">
+				<div class="inner">
+					<ul class="menu">
+						<li style="color:black;">&copy; CS 196 Illinois. All rights reserved.</li>
+					</ul>
+				</div>
 			</footer>
 
 		<!-- Scripts -->
+			<script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+			<script src="{{url_for('static', filename='js/jquery.scrollex.min.js')}}"></script>
+			<script src="{{url_for('static', filename='js/jquery.scrolly.min.js')}}"></script>
+			<script src="{{url_for('static', filename='js/skel.min.js')}}"></script>
+			<script src="{{url_for('static', filename='js/util.js')}}"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="{{url_for('static', filename='js/main.js')}}"></script>
 

@@ -1,0 +1,26 @@
+#officers {
+    background-color:_palette(bgSWEG);
+    
+    .row {
+        .col-sm-3 {
+            text-align: center;
+            color: _palette(text-black); 
+            border: 10px solid _palette(bgSWEG);
+            .officer-bg {
+                font-size: 14px;
+                padding:10px;
+                border: 2px solid _palette(bg);
+                background-color: _palette(text-white);
+
+                img {
+                    width:100%;
+                }
+
+                h4 {
+                    color: _palette(text-black);
+                    font-weight:700;
+                }
+            }
+        }
+    }
+}

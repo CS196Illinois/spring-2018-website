@@ -164,4 +164,4 @@ if __name__ == "__main__":
     db.init_app(app)
     db.create_all(app=app)
     import_data()
-    app.run("0.0.0.0", port=80, threaded=True)
+    app.run("0.0.0.0", port=8001, threaded=True)
