@@ -2722,7 +2722,7 @@ table {
     border: 0;
     color: rgba(255, 255, 255, 0.35);
     display: block;
-    font-size: 0.6em;
+    font-size: 0.8em;
     font-weight: bold;
     letter-spacing: 0.25em;
     line-height: 1.75;
@@ -2742,10 +2742,10 @@ table {
     #sidebar nav a:before {
       background: #fcda63; }
     #sidebar nav a:after {
-      background-image: -moz-linear-gradient(to right, white, #fcd44a);
-      background-image: -webkit-linear-gradient(to right, white, #fcd44a);
-      background-image: -ms-linear-gradient(to right, white, #fcd44a);
-      background-image: linear-gradient(to right, white, #fcd44a);
+      background-image: -moz-linear-gradient(to right, #ffffff, #fcd44a);
+      background-image: -webkit-linear-gradient(to right, #ffffff, #fcd44a);
+      background-image: -ms-linear-gradient(to right, #ffffff, #fcd44a);
+      background-image: linear-gradient(to right, #ffffff, #fcd44a);
       -moz-transition: max-width 0.2s ease;
       -webkit-transition: max-width 0.2s ease;
       -ms-transition: max-width 0.2s ease;
@@ -2816,6 +2816,7 @@ table {
 
 /* Intro */
 #intro {
+  color: #ffffff;
   background-attachment: fixed;
   background-image: url("images/bg01.jpg") !important;
   background-position: top right;
@@ -2832,5 +2833,41 @@ table {
   @media screen and (max-width: 1280px) {
     #intro {
       background-attachment: scroll; } }
+
+#officers {
+  background-color: #fcd44a; }
+  #officers .row .col-sm-3 {
+    text-align: center;
+    color: #000000;
+    border: 10px solid #fcd44a; }
+    #officers .row .col-sm-3 .officer-bg {
+      font-size: 14px;
+      padding: 10px;
+      border: 2px solid #ff785f;
+      background-color: #ffffff; }
+      #officers .row .col-sm-3 .officer-bg img {
+        width: 100%; }
+      #officers .row .col-sm-3 .officer-bg h4 {
+        color: #000000;
+        font-weight: 700; }
+
+#links {
+  background-color: #494949;
+  color: #ffffff; }
+
+/* Attendance */
+#attendance {
+  color: #ffffff;
+  background-color: #6caec4; }
+
+#events {
+  background-color: #494949;
+  color: #ffffff; }
+
+#lectures {
+  background-color: white; }
+
+#homeworks {
+  color: #ffffff; }
 
 /*# sourceMappingURL=main.css.map */
