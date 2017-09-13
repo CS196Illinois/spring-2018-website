@@ -1324,10 +1324,10 @@ h1 {
     position: relative;
     padding-bottom: 0.35em; }
     h1.major:after {
-      background-image: -moz-linear-gradient(to right, #6caec4, #ffffff);
-      background-image: -webkit-linear-gradient(to right, #6caec4, #ffffff);
-      background-image: -ms-linear-gradient(to right, #6caec4, #ffffff);
-      background-image: linear-gradient(to right, #6caec4, #ffffff);
+      background-image: -moz-linear-gradient(to right, #6caec4, #2EA657);
+      background-image: -webkit-linear-gradient(to right, #6caec4, #2EA657);
+      background-image: -ms-linear-gradient(to right, #6caec4, #2EA657);
+      background-image: linear-gradient(to right, #6caec4, #2EA657);
       -moz-transition: max-width 0.2s ease;
       -webkit-transition: max-width 0.2s ease;
       -ms-transition: max-width 0.2s ease;
@@ -1524,7 +1524,7 @@ button,
   input[type="button"].big,
   button.big,
   .button.big {
-    font-size: 0.8em; }
+    font-size: 0.8em; } 
   input[type="submit"].special,
   input[type="reset"].special,
   input[type="button"].special,
@@ -1906,7 +1906,7 @@ input[type="radio"] {
   input[type="radio"]:checked + label:before {
     background: #ffffff;
     border-color: #ffffff;
-    color: #ffffff;
+    color: #2EA657;
     content: '\f00c'; }
   input[type="checkbox"]:focus + label:before,
   input[type="radio"]:focus + label:before {
@@ -1974,9 +1974,9 @@ input[type="radio"] + label:before {
       .wrapper.style2-alt .icon.major:before {
         color: #20728e; }
       .wrapper.style3 .icon.major:before {
-        color: #ffffff; }
+        color: #494949; }
       .wrapper.style3-alt .icon.major:before {
-        color: #237e42; }
+        color: #494949; }
 
 /* Image */
 .image {
@@ -2255,7 +2255,7 @@ header h6 + p {
       -webkit-transition: opacity 1s ease;
       -ms-transition: opacity 1s ease;
       transition: opacity 1s ease;
-      background: rgba(255, 120, 95, 0.9);
+      background: rgba(83, 149, 171, 0.9);
       content: '';
       display: block;
       height: 100%;
@@ -2383,15 +2383,15 @@ table {
       .wrapper > .inner {
         padding: 3em 2em 1em 2em ; } }
   .wrapper.alt {
-    background-color: #494949; }
+    background-color: #4b869a; }
   .wrapper.style1 {
-    background-color: #494949; }
+    background-color: #6caec4; }
   .wrapper.style1-alt {
-    background-color: #494949; }
+    background-color: #489ab5; }
   .wrapper.style2 {
-    background-color: #494949; }
+    background-color: #2a94b7; }
   .wrapper.style2-alt {
-    background-color: #494949; }
+    background-color: #20728e; }
   .wrapper.style3 {
     background-color: #494949; }
   .wrapper.style3-alt {
@@ -2740,12 +2740,12 @@ table {
       right: 0;
       width: 100%; }
     #sidebar nav a:before {
-      background: #fcda63; }
+      background: #64a0b4; }
     #sidebar nav a:after {
-      background-image: -moz-linear-gradient(to right, white, #fcd44a);
-      background-image: -webkit-linear-gradient(to right, white, #fcd44a);
-      background-image: -ms-linear-gradient(to right, white, #fcd44a);
-      background-image: linear-gradient(to right, white, #fcd44a);
+      background-image: -moz-linear-gradient(to right, #6caec4, #2EA657);
+      background-image: -webkit-linear-gradient(to right, #6caec4, #2EA657);
+      background-image: -ms-linear-gradient(to right, #6caec4, #2EA657);
+      background-image: linear-gradient(to right, #6caec4, #2EA657);
       -moz-transition: max-width 0.2s ease;
       -webkit-transition: max-width 0.2s ease;
       -ms-transition: max-width 0.2s ease;
@@ -2809,7 +2809,7 @@ table {
           padding: 0; }
           #sidebar nav a:after {
             background-image: none;
-            background-color: #ffffff; } }
+            background-color: #2EA657; } }
   @media screen and (max-width: 736px) {
     #sidebar {
       display: none; } }
@@ -2817,7 +2817,7 @@ table {
 /* Intro */
 #intro {
   background-attachment: fixed;
-  background-image: url("images/bg01.jpg") !important;
+  background-image: url("images/intro.svg");
   background-position: top right;
   background-repeat: no-repeat;
   background-size: 100% 100%; }

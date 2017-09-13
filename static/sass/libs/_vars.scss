@@ -33,7 +33,7 @@
 
 // Palette.
 	$palette: (
-		bg:					#fcd44a
+		bg:					#ff785f,
 		bg-alt:				darken(#5395AB, 5),
 		fg:					rgba(255,255,255,0.55),
 		fg-bold:			#ffffff,
@@ -44,6 +44,7 @@
 		accent1-alt:		darken(#6caec4, 10),
 		accent2:			#2a94b7,
 		accent2-alt:		darken(#2a94b7, 10),
-		accent3:			white,
-		accent3-alt:		darken(#2EA657, 10)
+		accent3:			#ffffff,
+		accent3-alt:		darken(#2EA657, 10),
+		bgSWEG: 			#fcd44a
 	);
