@@ -52,10 +52,11 @@
 									<img align="right" style="width:12em" src ="https://imgur.com/5GdDgzX.png"/>
 								</div>
 								<div class="col-sm-8">
-									<h1 style="font-size:45pt;">CS196@Illinois</h1>
+									<h1 style="font-size:45pt; font-weight:200; margin-bottom:0;">CS196@Illinois</h1>
 									<p>Illinois' premier freshman honor class by students, for students.</p>
 									<ul class="actions">
 										<li><a href="#homeworks" class="button scrolly" style="font-size: 8pt;">Homework</a></li>
+										<li><a href="#attendance" class="button scrolly" style="font-size: 8pt;">Attendance</a></li>
 									</ul>
 								</div>
 							</div>
@@ -110,11 +111,12 @@
 						<div class="inner">
 							<h2 style="margin-bottom:30px;">Resources</h2>
 							<div class="features">
-								<section><a href = "https://github.com/CS196Illinois" style="color:white;text-decoration: none">
+								<section>
+									<a href = "https://github.com/CS196Illinois" style="color:white;text-decoration: none">
 									<span class="icon major fa-code"></span>
 									<h3>GitHub</h3>
 									<p>GitHub is a development platform inspired by the way you work. From open source to business, you can host and review code, manage projects, and build software alongside millions of other developers.</p>
-								</a>
+									</a>
 								</section>
 								<section><a href = "https://piazza.com/" style="color:white;text-decoration: none">
 									<span class="icon major fa-lock"></span>
@@ -128,12 +130,14 @@
 									<p>We use RELATE to do the first few homeworks. Don't procrastinate on them! They can get a little tricky at times, so start early.</p>
 								</a>	
 								</section>
-								<section><a href = "https://stackoverflow.com/" style="color:white;text-decoration: none">
+								
+								<section>
+								<a href = "https://stackoverflow.com/" style="color:white;text-decoration: none">
 									<span class="icon major fa-desktop"></span>
 									<h3>Stack Overflow</h3>
 									<p>Stack Overflow is the largest, most trusted online community for developers to learn, share​ ​their programming ​knowledge, and build their careers. You could probably get your CS degree from this website.</p>
-								</a>	
-								</section>
+								</a>
+								</section> 
 							</div>
 						</div>
 					</section>
@@ -452,6 +456,8 @@
 			</footer>
 
 		<!-- Scripts -->
+
+			// section.innerHTML = 'Could have loaded ' + href + ' here';
 			<script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
 			<script src="{{url_for('static', filename='js/jquery.scrollex.min.js')}}"></script>
 			<script src="{{url_for('static', filename='js/jquery.scrolly.min.js')}}"></script>
