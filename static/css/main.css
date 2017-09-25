@@ -2842,14 +2842,33 @@ table {
     border: 10px solid #fcd44a; }
     #officers .row .col-sm-3 .officer-bg {
       font-size: 14px;
-      padding: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
       border: 2px solid #ff785f;
       background-color: #ffffff; }
       #officers .row .col-sm-3 .officer-bg img {
-        width: 100%; }
+        width: 90%; }
       #officers .row .col-sm-3 .officer-bg h4 {
         color: #000000;
+        font-size: 14pt;
         font-weight: 700; }
+      #officers .row .col-sm-3 .officer-bg p {
+        margin-left: 10px;
+        margin-right: 10px; }
+      #officers .row .col-sm-3 .officer-bg .row {
+        padding: 3px; }
+        #officers .row .col-sm-3 .officer-bg .row .col-sm-6 {
+          width: 50%;
+          text-align: center;
+          font-size: 11pt;
+          font-weight: bold;
+          color: black; }
+        #officers .row .col-sm-3 .officer-bg .row .col-md-12 {
+          width: 100%;
+          text-align: center;
+          font-size: 11pt;
+          font-weight: bold;
+          color: black; }
 
 #links {
   background-color: #494949;
@@ -2866,6 +2885,36 @@ table {
 
 #lectures {
   background-color: white; }
+  #lectures h2 {
+    margin-bottom: 40px; }
+  #lectures .row {
+    color: black;
+    text-align: center; }
+    #lectures .row .col-sm-2 {
+      border: 5px solid white !important;
+      padding: 0px;
+      margin: 0px;
+      padding: 10px; }
+      #lectures .row .col-sm-2 .infoLecture {
+        border: 2px solid black !important;
+        height: 100%;
+        width: 100%; }
+      #lectures .row .col-sm-2 a:hover {
+        color: #ff785f !important;
+        text-decoration: none; }
+        #lectures .row .col-sm-2 a:hover h3 {
+          color: #ff785f !important; }
+      #lectures .row .col-sm-2 a:active {
+        color: #ff785f !important;
+        text-decoration: none; }
+        #lectures .row .col-sm-2 a:active h3 {
+          color: #ff785f !important; }
+      #lectures .row .col-sm-2 h3 {
+        margin-top: 15%;
+        color: black;
+        margin-bottom: 0px; }
+      #lectures .row .col-sm-2 p {
+        font-size: 10pt; }
 
 #homeworks {
   color: #ffffff; }

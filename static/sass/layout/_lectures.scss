@@ -1,3 +1,51 @@
 #lectures {
+    h2{
+        margin-bottom: 40px;
+    }
     background-color:white;
+    // > .lectureInner{
+    //     color:black !important;
+    //     text-align: center;
+    // }    
+    // p{
+    //     margin: 0!important;
+    // }
+    .row{
+        color:black;
+        text-align: center;
+    
+      .col-sm-2{
+        border: 5px solid white !important;
+        padding:0px;
+        margin:0px;
+        padding:10px;
+        .infoLecture{
+            border: 2px solid black !important;
+            height: 100%;
+            width:100%;
+        }
+        a:hover{
+            color:#ff785f !important;
+            text-decoration: none;
+            h3{
+                color:#ff785f !important;
+            }
+        }
+        a:active{
+            color:#ff785f !important;
+            text-decoration: none;
+            h3{
+                color:#ff785f !important;
+            }
+        }
+        h3{
+            margin-top:15%;
+            color:black; 
+            margin-bottom:0px;
+        }
+        p{
+            font-size: 10pt;
+        }
+      }
+    }    
 }
