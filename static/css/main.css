@@ -2919,9 +2919,8 @@ table {
 #homeworks {
   color: #ffffff; }
 
-/* Photos */
 #photos {
-  color: #ffffff;
-  background-color: #6caec4; }
+  background-color: #6caec4; 
+  color: #ffffff; }
 
 /*# sourceMappingURL=main.css.map */
