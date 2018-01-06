@@ -144,109 +144,15 @@
 						</div>
 					</section>
 
-				<!-- Attendance -->
-					<section id="attendance" class="wrapper fade-up">
-						<div class="inner">
-							<h2>Attendance</h2>
-							<p>Want attendance credit? Make sure you sign in with your NetID when you're at an ongoing lecture!</p>
-							<div class="split style1">
-								<section>
-									<form method="post" action="#">
-										<div class="field">
-											<label for="name">NetID</label>
-											<input type="text" name="name" id="name" />
-										</div>
-						
-										<ul class="actions">
-											<li><a href="" class="button submit">I'm Here!</a></li>
-											{{msg|safe}}
-										</ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Lecture Status</h3>
-											<span>Happening Now</span>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
 
 				<!-- Lectures -->
 				<section id="lectures" class="wrapper fade-up">
 					<div class="inner lectureInner">
 						<h2 style="color:black;">Lectures</h2>
 						<div class="row">
-							
-							<div class="col-sm-2">
-								<a href="{{url_for('static', filename='lectures/Week1.pdf')}}">
-									<div class="infoLecture">
-										<h3>Lecture 1</h3>
-										<p>Intro</p>
-									</div>	
-								</a>
-							</div>	
-							
-							<div class="col-sm-2">
-								<a href="{{url_for('static', filename='lectures/Week2.pdf')}}">
-									<div class="infoLecture">
-										<h3>Lecture 2</h3>
-										<p>Bash</p>
-									</div>	
-								</a>
-							</div>	
-							<div class="col-sm-2">
-								<a href="{{url_for('static', filename='lectures/Week3.pdf')}}">
-									<div class="infoLecture">
-										<h3>Lecture 3</h3>
-										<p>Pitching</p>
-									</div>	
-								</a>
-							</div>	
-							<div class="col-sm-2">
-								<a href="{{url_for('static', filename='lectures/Week4.pdf')}}">
-									<div class="infoLecture">
-										<h3>Lecture 4</h3>
-										<p>Pitches</p>
-									</div>	
-								</a>							
-							</div>	
-							<div class="col-sm-2">
-								<a href="{{url_for('static', filename='lectures/Week5.pdf')}}">
-									<div class="infoLecture">
-										<h3>Lecture 5</h3>
-										<p>Git</p>
-									</div>	
-								</a>
-							</div>								
-							<div class="col-sm-2">
-								<a href="{{url_for('static', filename='lectures/Week5.pdf')}}">
-									<div class="infoLecture">
-										<h3>Lecture 6</h3>
-										<p>Language Choice</p>
-									</div>	
-								</a>
-							</div><div class="col-sm-2">
-								<a href="{{url_for('static', filename='lectures/Week5.pdf')}}">
-									<div class="infoLecture">
-										<h3>Lecture 7</h3>
-										<p>Mobile Dev</p>
-									</div>	
-								</a>
-							</div>
-							<div class="col-sm-2">
-								<a href="{{url_for('static', filename='lectures/Week5.pdf')}}">
-									<div class="infoLecture">
-										<h3>Lecture 8</h3>
-										<p>Web Dev</p>
-									</div>	
-								</a>
-							</div>
-					</div>	
-				</div>	
+						        {{ lecture_formatted|safe }}
+						</div>
+					</div>
 				</section>
 
 				<!-- Events -->

@@ -1,0 +1,6 @@
+# Central configuration file for CS196 site auto-update
+
+staff_folder: "13ZIrZFQkMTUih9Ln4OmQSVX0xTuab5uS"
+staff_datasheet: "staff_data"
+
+lecture_datasheet: "lecture_data"
