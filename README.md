@@ -1,4 +1,4 @@
-# fall-2017-website
+# spring-2019-website
 
 ## Server
 To run, do `./runserver.sh`
