@@ -38,8 +38,10 @@ class Spreadsheet():
 
     def get_data(self):
         if not self.cached:
+            self.client.login()
             self.data = self.sheet.get_all_records()
         elif time.time() - self.last_updated > self.max_age:
+            self.client.login()
             self.data = self.sheet.get_all_records()
             self.last_updated = time.time()
 
