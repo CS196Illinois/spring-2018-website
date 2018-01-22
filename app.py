@@ -7,18 +7,18 @@ from datetime import datetime, timedelta
 from asset_manager import Spreadsheet, AssetFolder, authenticate_gdrive
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # load configuration
 with open('config.yaml', 'r') as stream:
     config = yaml.load(stream)
 
 # authenticate user
-credentials = authenticate_gdrive()
+if config['live_update']:
+    credentials = authenticate_gdrive()
 
-assets_base_dir = os.path.join(os.getcwd(), 'static/assets')
-staff_datasheet = Spreadsheet(config['staff_datasheet'], credentials, True, 60*60)
-lecture_datasheet = Spreadsheet(config['lecture_datasheet'], credentials, True, 60*60)
+    assets_base_dir = os.path.join(os.getcwd(), 'static/assets')
+    staff_datasheet = Spreadsheet(config['staff_datasheet'], credentials, True, 60*60)
+    lecture_datasheet = Spreadsheet(config['lecture_datasheet'], credentials, True, 60*60)
 
 #
 # API Endpoints
@@ -46,7 +46,10 @@ def home_w_content(content):
     return web_endpoint()
 
 def web_endpoint():
-    staff_data = staff_datasheet.get_data()
+    if config['live_update']:
+        staff_data = staff_datasheet.get_data()
+    else:
+        staff_data = [] # for local development only
     staff_arr = []
     for index, staff in enumerate(staff_data):
         start_row = ""
@@ -70,7 +73,10 @@ def web_endpoint():
     staff_formatted = "\n".join(staff_arr)
 
     # format lecture data
-    lecture_data = lecture_datasheet.get_data()
+    if config['live_update']:
+        lecture_data = lecture_datasheet.get_data()
+    else:
+        lecture_data = [] # for local development only
     lecture_arr = []
     for lecture in lecture_data:
         lecture_arr.append("""
