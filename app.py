@@ -59,17 +59,24 @@ def web_endpoint():
         elif index % 4 == 3:
             end_row = """</div>"""
 
+        if staff["officer"]:
+            border = "officer-bg"
+            logging.error("%s is officer" % staff["name"])
+        else:
+            border = "staff-bg"
+            logging.error("%s is staff" % staff["name"])
+
         staff_arr.append("""
             %s
             <div class="col-sm-3"> 
-                <div class="officer-bg">
+                <div class="%s">
                     <img src = "%s"/>
                     <h4>%s</h4>
                     <p>%s</p>
                 </div>  
             </div>
             %s
-        """ % (start_row, staff['profile'], staff['name'], staff['desc'], end_row))
+        """ % (start_row, border, staff['profile'], staff['name'], staff['desc'], end_row))
     staff_formatted = "\n".join(staff_arr)
 
     # format lecture data
