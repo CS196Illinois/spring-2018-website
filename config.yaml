@@ -1,6 +1,6 @@
 # Central configuration file for CS196 site auto-update
 
-live_update: false
+live_update: true
 
 staff_folder: "13ZIrZFQkMTUih9Ln4OmQSVX0xTuab5uS"
 staff_datasheet: "staff_data"

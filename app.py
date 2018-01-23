@@ -92,10 +92,11 @@ def web_endpoint():
                     <div class="infoLecture">
                         <h3>Lecture %s</h3>
                         <p>%s</p>
+                        <a href="%s">Video</a>
                     </div>
                 </a>
             </div>
-        """ % (lecture['slides'], lecture['lecture_id'], lecture['title']))
+        """ % (lecture['slides'], lecture['lecture_id'], lecture['title'], lecture['video']))
     lecture_formatted = "\n".join(lecture_arr)
 
     return render_template("index.html", staff_formatted=staff_formatted,
