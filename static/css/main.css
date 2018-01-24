@@ -2844,7 +2844,7 @@ table {
       font-size: 14px;
       padding-top: 10px;
       padding-bottom: 10px;
-      border: 2px solid #ff785f;
+      border: 4px solid #ff785f;
       background-color: #ffffff; }
       #officers .row .col-sm-3 .officer-bg img {
         width: 90%; }
@@ -2864,6 +2864,36 @@ table {
           font-weight: bold;
           color: black; }
         #officers .row .col-sm-3 .officer-bg .row .col-md-12 {
+          width: 100%;
+          text-align: center;
+          font-size: 11pt;
+          font-weight: bold;
+          color: black; }
+
+    #officers .row .col-sm-3 .staff-bg {
+      font-size: 14px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 2px solid #494949;
+      background-color: #ffffff; }
+      #officers .row .col-sm-3 .staff-bg img {
+        width: 90%; }
+      #officers .row .col-sm-3 .staff-bg h4 {
+        color: #000000;
+        font-size: 14pt;
+        font-weight: 700; }
+      #officers .row .col-sm-3 .staff-bg p {
+        margin-left: 10px;
+        margin-right: 10px; }
+      #officers .row .col-sm-3 .staff-bg .row {
+        padding: 3px; }
+        #officers .row .col-sm-3 .staff-bg .row .col-sm-6 {
+          width: 50%;
+          text-align: center;
+          font-size: 11pt;
+          font-weight: bold;
+          color: black; }
+        #officers .row .col-sm-3 .staff-bg .row .col-md-12 {
           width: 100%;
           text-align: center;
           font-size: 11pt;
