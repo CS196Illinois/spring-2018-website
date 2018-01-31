@@ -59,12 +59,7 @@ def web_endpoint():
         elif index % 4 == 3:
             end_row = """</div>"""
 
-        if staff["officer"]:
-            border = "officer-bg"
-            logging.error("%s is officer" % staff["name"])
-        else:
-            border = "staff-bg"
-            logging.error("%s is staff" % staff["name"])
+        border = "officer-bg" if staff["officer"] else "staff-bg"
 
         staff_arr.append("""
             %s
@@ -93,10 +88,12 @@ def web_endpoint():
                         <h3>Lecture %s</h3>
                         <p>%s</p>
                         <a href="%s">Video</a>
+                        <a href="%s">Demo</a>
                     </div>
                 </a>
             </div>
-        """ % (lecture['slides'], lecture['lecture_id'], lecture['title'], lecture['video']))
+        """ % (lecture['slides'], lecture['lecture_id'], lecture['title'],
+               lecture['video'], lecture['demo']))
     lecture_formatted = "\n".join(lecture_arr)
 
     return render_template("index.html", staff_formatted=staff_formatted,
