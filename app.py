@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, abort
+from flask import Flask, render_template, request, abort, jsonify
 import logging
 import os
 import sched
@@ -7,6 +7,7 @@ from datetime import datetime, timedelta
 from asset_manager import Spreadsheet, AssetFolder, authenticate_gdrive
 
 app = Flask(__name__)
+resources = {}
 
 # load configuration
 with open('config.yaml', 'r') as stream:
@@ -17,8 +18,8 @@ if config['live_update']:
     credentials = authenticate_gdrive()
 
     assets_base_dir = os.path.join(os.getcwd(), 'static/assets')
-    staff_datasheet = Spreadsheet(config['staff_datasheet'], credentials, True, 60*60)
-    lecture_datasheet = Spreadsheet(config['lecture_datasheet'], credentials, True, 60*60)
+    resources['staff_datasheet'] = Spreadsheet(config['staff_datasheet'], credentials, True, 60*60)
+    resources['lecture_datasheet'] = Spreadsheet(config['lecture_datasheet'], credentials, True, 60*60)
 
 #
 # API Endpoints
@@ -37,6 +38,13 @@ def webhook():
         logging.error("non-master branch updated; no reload")
     return "success"
 
+@app.route("/resource/<resourcename>")
+def resource_endpoint(resourcename):
+    if resourcename not in resources:
+        return abort(404)
+    resource_data = resources[resourcename].get_data()
+    return jsonify(resource_data)
+
 @app.route("/")
 def home():
     return web_endpoint()
@@ -47,7 +55,7 @@ def home_w_content(content):
 
 def web_endpoint():
     if config['live_update']:
-        staff_data = staff_datasheet.get_data()
+        staff_data = resources['staff_datasheet'].get_data()
     else:
         staff_data = [] # for local development only
     staff_arr = []
@@ -76,7 +84,7 @@ def web_endpoint():
 
     # format lecture data
     if config['live_update']:
-        lecture_data = lecture_datasheet.get_data()
+        lecture_data = resources['lecture_datasheet'].get_data()
     else:
         lecture_data = [] # for local development only
     lecture_arr = []
