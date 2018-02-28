@@ -1,12 +1,12 @@
-from flask import Flask, render_template, request, abort
+from flask import Flask, render_template, request, abort, jsonify
 import logging
 import os
 import sched
 import yaml
+from collections import deque
 from datetime import datetime, timedelta
 from asset_manager import Spreadsheet, AssetFolder, authenticate_gdrive
-
-app = Flask(__name__)
+from feed_utils import FeedManager
 
 # load configuration
 with open('config.yaml', 'r') as stream:
@@ -20,6 +20,10 @@ if config['live_update']:
     staff_datasheet = Spreadsheet(config['staff_datasheet'], credentials, True, 60*60)
     lecture_datasheet = Spreadsheet(config['lecture_datasheet'], credentials, True, 60*60)
 
+app = Flask(__name__)
+feed_manager = FeedManager(config['feed_size'])
+
+
 #
 # API Endpoints
 #
@@ -29,13 +33,25 @@ def webhook():
     if not request.json or "ref" not in request.json:
         return abort(400)
     elif request.json["ref"] == "refs/heads/master":
-        func = request.environ.get('werkzeug.server.shutdown')
+        func = request.environ.get("werkzeug.server.shutdown")
         if func is None:
             raise RuntimeError
         func()
     else:
         logging.error("non-master branch updated; no reload")
     return "success"
+
+@app.route("/feed", methods=["GET", "POST"])
+def feed():
+    if request.method == "POST":
+        if "message" not in request.values:
+            return abort(400)
+
+        feed_manager.post(request.values.get("message"), request.remote_addr)
+        return jsonify({"success": True}), 201
+    else:
+        feed = feed_manager.get_feed()
+        return jsonify({"data": feed, "size": len(feed)})
 
 @app.route("/")
 def home():

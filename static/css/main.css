@@ -2904,14 +2904,22 @@ table {
   background-color: #494949;
   color: #ffffff; }
 
-/* Attendance */
-#attendance {
-  color: #ffffff;
-  background-color: #6caec4; }
-
 #events {
   background-color: #494949;
   color: #ffffff; }
+
+#feed {
+  background-color: #6caec4;
+  color: #ffffff; }
+  #feed .message {
+    background-color: #323232;
+    padding: 5px;
+    margin: 5px; }
+    #feed .message .author {
+      font-weight: bold; }
+    #feed .message .time {
+      float: right;
+      font-weight: lighter; }
 
 #lectures {
   background-color: white; }

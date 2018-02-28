@@ -1,8 +1,11 @@
 # Central configuration file for CS196 site auto-update
 
+# Periodically update content from Google Drive
 live_update: true
 
-staff_folder: "13ZIrZFQkMTUih9Ln4OmQSVX0xTuab5uS"
+# Names of spreadsheets from which to pull content
 staff_datasheet: "staff_data"
-
 lecture_datasheet: "lecture_data"
+
+# Maximum message feed size
+feed_size: 50
