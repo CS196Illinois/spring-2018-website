@@ -19,6 +19,7 @@ if config['live_update']:
     assets_base_dir = os.path.join(os.getcwd(), 'static/assets')
     staff_datasheet = Spreadsheet(config['staff_datasheet'], credentials, True, 60*60)
     lecture_datasheet = Spreadsheet(config['lecture_datasheet'], credentials, True, 60*60)
+    news_datasheet = Spreadsheet(config['news_datasheet'], credentials, True, 60*60)
 
 #
 # API Endpoints
@@ -46,6 +47,22 @@ def home_w_content(content):
     return web_endpoint()
 
 def web_endpoint():
+
+    # format news data
+    if config['live_update']:
+        news_data = news_datasheet.get_data()
+    else:
+        news_data = []
+    news_arr = []
+    for news in news_data:
+        news_arr.append("""
+            <div>
+                <b>%s</b> : <span>%s</span>
+            </div> 
+        """ % (news['date'], news['text']))
+    news_formatted = "\n".join(news_arr)
+
+    # format staff data
     if config['live_update']:
         staff_data = staff_datasheet.get_data()
     else:
@@ -96,7 +113,8 @@ def web_endpoint():
                lecture['video'], lecture['demo']))
     lecture_formatted = "\n".join(lecture_arr)
 
-    return render_template("index.html", staff_formatted=staff_formatted,
+    return render_template("index.html", news_formatted=news_formatted,
+                           staff_formatted=staff_formatted,
                            lecture_formatted=lecture_formatted)
 
 if __name__ == "__main__":
