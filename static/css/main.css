@@ -2917,36 +2917,34 @@ table {
   background-color: white; }
   #lectures h2 {
     margin-bottom: 40px; }
-  #lectures .row {
+  #lectures .features {
     color: black;
     text-align: center; }
-    #lectures .row h3 {
-      color: black; }
-    #lectures .row .col-sm-2 {
-      width: 16.6667%;
-      border: 5px solid white !important;
-      padding: 5px;
+    #lectures .features tr {
+      border: 2px solid grey !important;
+      height: 100%;
+      width: 100%; }
+    #lectures .features span {
+      float: left;
+      margin-left: 20px; }
+    #lectures .features b {
+      color: black !important;
       margin: 0px; }
-      #lectures .row .col-sm-2 .infoLecture {
-        border: 2px solid black !important;
-        height: 100%;
-        width: 100%; }
-      #lectures .row .col-sm-2 a:hover {
-        color: #ff785f !important;
-        text-decoration: none; }
-        #lectures .row .col-sm-2 a:hover h3 {
-          color: #ff785f !important; }
-      #lectures .row .col-sm-2 a:active {
-        color: #ff785f !important;
-        text-decoration: none; }
-        #lectures .row .col-sm-2 a:active h3 {
-          color: #ff785f !important; }
-      #lectures .row .col-sm-2 h3 {
-        margin-top: 15%;
-        color: black;
-        margin-bottom: 0px; }
-      #lectures .row .col-sm-2 p {
-        font-size: 10pt; }
+    #lectures .features a {
+      margin: 10px 20px 10px 20px;
+      color: grey !important; }
+    #lectures .features a:hover {
+      color: #ff785f !important;
+      text-decoration: none; }
+    #lectures .features a:active {
+      color: #ff785f !important;
+      text-decoration: none; }
+    #lectures .features h3 {
+      margin-top: 15%;
+      color: black;
+      margin-bottom: 0px; }
+    #lectures .features p {
+      font-size: 10pt; }
 
 #homeworks {
   color: #ffffff; }
