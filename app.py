@@ -99,17 +99,17 @@ def web_endpoint():
     lecture_arr = []
     for lecture in lecture_data:
         lecture_arr.append("""
-            <div class="col-sm-2">
-                <a href="%s">
-                    <div class="infoLecture">
-                        <h3>Lecture %s</h3>
-                        <p>%s</p>
-                        <a href="%s">Video</a>
-                        <a href="%s">Demo</a>
-                    </div>
-                </a>
-            </div>
-        """ % (lecture['slides'], lecture['lecture_id'], lecture['title'],
+            <tr>
+                <td>
+                    <span><b>Lecture %s: </b>%s</span>
+                </td>
+                <td>
+                    <a href="%s"><i class="fas fa-chalkboard"></i></a>
+                    <a href="%s"><i class="fas fa-video"></i></a>
+                    <a href="%s"><i class="fas fa-code"></i></a>
+                </td>
+            </tr>
+        """ % (lecture['lecture_id'], lecture['title'], lecture['slides'],
                lecture['video'], lecture['demo']))
     lecture_formatted = "\n".join(lecture_arr)
 
