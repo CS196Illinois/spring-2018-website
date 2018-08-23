@@ -20,6 +20,7 @@ if config['live_update']:
     staff_datasheet = Spreadsheet(config['staff_datasheet'], credentials, True, 60*60)
     lecture_datasheet = Spreadsheet(config['lecture_datasheet'], credentials, True, 60*60)
     news_datasheet = Spreadsheet(config['news_datasheet'], credentials, True, 60*60)
+    sponsor_datasheet = Spreadsheet(config['sponsor_datasheet'], credentials, True, 60*60)
 
 #
 # API Endpoints
@@ -113,9 +114,30 @@ def web_endpoint():
                lecture['video'], lecture['demo']))
     lecture_formatted = "\n".join(lecture_arr)
 
-    return render_template("index.html", news_formatted=news_formatted,
-                           staff_formatted=staff_formatted,
-                           lecture_formatted=lecture_formatted)
+    # format sponsor data
+    if config['live_update']:
+        sponsor_data = sponsor_datasheet.get_data()
+    else:
+        sponsor_data = []
+    sponsor_arr = []
+    for sponsor in sponsor_data:
+        sponsor_arr.append("""
+            <section class="col-sm-3">
+                <a href = "%s" style="color:white;text-decoration: none">
+                    <img src="%s"/>
+                    <h2>%s</h2>
+                </a>
+            </section>
+        """ % (sponsor['link'], sponsor['image'], sponsor['name']))
+    sponsor_formatted = "\n".join(sponsor_arr)
+
+    return render_template(
+        "index.html",
+        news_formatted=news_formatted,
+        staff_formatted=staff_formatted,
+        lecture_formatted=lecture_formatted,
+        sponsor_formatted=sponsor_formatted,
+    )
 
 if __name__ == "__main__":
     app.run("0.0.0.0", port=80, threaded=True)

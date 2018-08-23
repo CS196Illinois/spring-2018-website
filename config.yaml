@@ -8,3 +8,5 @@ staff_datasheet: "staff_data"
 lecture_datasheet: "lecture_data"
 
 news_datasheet: "news_data"
+
+sponsor_datasheet: "sponsor_data"
