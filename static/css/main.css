@@ -2834,66 +2834,70 @@ table {
     #intro {
       background-attachment: scroll; } }
 
-#officers {
+#staff {
   background-color: #fcd44a; }
-  #officers .row .col-sm-3 {
+  #staff .row .col-sm-3 {
     text-align: center;
     color: #000000;
     border: 10px solid #fcd44a; }
-    #officers .row .col-sm-3 .officer-bg {
+    #staff .row .col-sm-3 .instructor-bg {
       font-size: 14px;
       padding-top: 10px;
       padding-bottom: 10px;
       border: 4px solid #ff785f;
       background-color: #ffffff; }
-      #officers .row .col-sm-3 .officer-bg img {
-        width: 90%; }
-      #officers .row .col-sm-3 .officer-bg h4 {
+      #staff .row .col-sm-3 .instructor-bg img {
+        width: 90%;
+        height: 90%;
+        object-fit: cover; }
+      #staff .row .col-sm-3 .instructor-bg h4 {
         color: #000000;
         font-size: 14pt;
         font-weight: 700; }
-      #officers .row .col-sm-3 .officer-bg p {
+      #staff .row .col-sm-3 .instructor-bg p {
         margin-left: 10px;
         margin-right: 10px; }
-      #officers .row .col-sm-3 .officer-bg .row {
+      #staff .row .col-sm-3 .instructor-bg .row {
         padding: 3px; }
-        #officers .row .col-sm-3 .officer-bg .row .col-sm-6 {
+        #staff .row .col-sm-3 .instructor-bg .row .col-sm-6 {
           width: 50%;
           text-align: center;
           font-size: 11pt;
           font-weight: bold;
           color: black; }
-        #officers .row .col-sm-3 .officer-bg .row .col-md-12 {
+        #staff .row .col-sm-3 .instructor-bg .row .col-md-12 {
           width: 100%;
           text-align: center;
           font-size: 11pt;
           font-weight: bold;
           color: black; }
 
-    #officers .row .col-sm-3 .staff-bg {
+    #staff .row .col-sm-3 .staff-bg {
       font-size: 14px;
       padding-top: 10px;
       padding-bottom: 10px;
       border: 2px solid #494949;
       background-color: #ffffff; }
-      #officers .row .col-sm-3 .staff-bg img {
-        width: 90%; }
-      #officers .row .col-sm-3 .staff-bg h4 {
+      #staff .row .col-sm-3 .staff-bg img {
+        width: 90%;
+        height: 90%;
+        object-fit: cover; }
+      #staff .row .col-sm-3 .staff-bg h4 {
         color: #000000;
         font-size: 14pt;
         font-weight: 700; }
-      #officers .row .col-sm-3 .staff-bg p {
+      #staff .row .col-sm-3 .staff-bg p {
         margin-left: 10px;
         margin-right: 10px; }
-      #officers .row .col-sm-3 .staff-bg .row {
+      #staff .row .col-sm-3 .staff-bg .row {
         padding: 3px; }
-        #officers .row .col-sm-3 .staff-bg .row .col-sm-6 {
+        #staff .row .col-sm-3 .staff-bg .row .col-sm-6 {
           width: 50%;
           text-align: center;
           font-size: 11pt;
           font-weight: bold;
           color: black; }
-        #officers .row .col-sm-3 .staff-bg .row .col-md-12 {
+        #staff .row .col-sm-3 .staff-bg .row .col-md-12 {
           width: 100%;
           text-align: center;
           font-size: 11pt;
@@ -2910,6 +2914,10 @@ table {
   background-color: #6caec4; }
 
 #news {
+  background-color: #6caec4;
+  color: #ffffff; }
+
+#calendar {
   background-color: #6caec4;
   color: #ffffff; }
 
@@ -2953,5 +2961,9 @@ table {
 #photos {
   color: #ffffff;
   background-color: #6caec4; }
+
+#footer ul{
+  padding: 1pt;
+  margin-bottom: 0px; }
 
 /*# sourceMappingURL=main.css.map */

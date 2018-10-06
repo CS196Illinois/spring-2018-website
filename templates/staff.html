@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<!--
+    Hyperspace by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>CS 196</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+        <link rel="icon" type="image/png" href="https://imgur.com/5GdDgzX.png">
+        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/solid.css" integrity="sha384-S2gVFTIn1tJ/Plf+40+RRAxBCiBU5oAMFUJxTXT3vOlxtXm7MGjVj62mDpbujs4C" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/fontawesome.css" integrity="sha384-0b7ERybvrT5RZyD80ojw6KNKz6nIAlgOKXIcJ0CV7A6Iia8yt2y1bBfLBOwoc9fQ" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script> 
+            $(function(){
+              $("#sidebar-included").load("{{url_for('static', filename='html/sidebar.html')}}"); 
+              $("#footer-included").load("{{url_for('static', filename='html/footer.html')}}"); 
+            });
+        </script> 
+    </head>
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    </head>
+    <body style="font-family: 'Oxygen', sans-serif;">
+
+        <!-- Sidebar -->
+        <section id="sidebar" style="background-color:#ff785f;">
+            <div id="sidebar-included"></div>
+        </section>
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <!-- Staff -->
+            <section id="staff" class="wrapper fade-up">
+                <div class="inner">
+                    <h2 style="margin-bottom: 20px; font-weight:800;">Course Staff</h2>
+                    {{ staff_formatted|safe }}
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer-included"></div>
+
+        <!-- Scripts -->
+
+
+        <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/jquery.scrollex.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/jquery.scrolly.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/skel.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/util.js')}}"></script>
+        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+        <script src="{{url_for('static', filename='js/main.js')}}"></script>
+
+    </body>
+</html>
