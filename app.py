@@ -88,19 +88,21 @@ def resources():
         lecture_data = [] # for local development only
     lecture_arr = []
     for lecture in lecture_data:
+        # mark empty resources in red
+        color = {}
+        for field in ['prelecture', 'slides', 'video', 'demo']:
+            color[field] = 'resource_missing' if (lecture[field] == "") else 'resource_present'
         lecture_arr.append("""
             <tr>
-                <td>
-                    <span><b>Lecture %s: </b>%s</span>
-                </td>
-                <td>
-                    <a href="%s"><i class="fas fa-chalkboard"></i></a>
-                    <a href="%s"><i class="fas fa-video"></i></a>
-                    <a href="%s"><i class="fas fa-code"></i></a>
-                </td>
+                <td><span><b>Lecture %s: </b>%s</span></td>
+                <td><a href="%s" class="%s"><i class="fas fa-book"></i></a></td>
+                <td><a href="%s" class="%s"><i class="fas fa-chalkboard"></i></a></td>
+                <td><a href="%s" class="%s"><i class="fas fa-video"></i></a></td>
+                <td><a href="%s" class="%s"><i class="fas fa-code"></i></a></td>
             </tr>
-        """ % (lecture['lecture_id'], lecture['title'], lecture['slides'],
-               lecture['video'], lecture['demo']))
+        """ % (lecture['lecture_id'], lecture['title'], lecture['prelecture'],
+               color['prelecture'], lecture['slides'], color['slides'],
+               lecture['video'], color['video'], lecture['demo'], color['demo']))
     lecture_formatted = "\n".join(lecture_arr)
 
     return render_template(

@@ -2953,6 +2953,10 @@ table {
       margin-bottom: 0px; }
     #lectures .features p {
       font-size: 10pt; }
+    #lectures .features .resource_missing {
+      color: #ff785f !important; }
+    #lectures .features .resource_present {
+      color: grey !important; }
 
 #homeworks {
   color: #ffffff; }
